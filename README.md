@@ -98,6 +98,7 @@ Current release info
 | Name | Downloads | Version | Platforms |
 | --- | --- | --- | --- |
 | [![Conda Recipe](https://img.shields.io/badge/recipe-imagecodecs-green.svg)](https://anaconda.org/conda-forge/imagecodecs) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/imagecodecs.svg)](https://anaconda.org/conda-forge/imagecodecs) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/imagecodecs.svg)](https://anaconda.org/conda-forge/imagecodecs) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/imagecodecs.svg)](https://anaconda.org/conda-forge/imagecodecs) |
+| [![Conda Recipe](https://img.shields.io/badge/recipe-imagecodecs--lite-green.svg)](https://anaconda.org/conda-forge/imagecodecs-lite) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/imagecodecs-lite.svg)](https://anaconda.org/conda-forge/imagecodecs-lite) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/imagecodecs-lite.svg)](https://anaconda.org/conda-forge/imagecodecs-lite) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/imagecodecs-lite.svg)](https://anaconda.org/conda-forge/imagecodecs-lite) |
 
 Installing imagecodecs
 ======================
@@ -108,10 +109,10 @@ Installing `imagecodecs` from the `conda-forge` channel can be achieved by addin
 conda config --add channels conda-forge
 ```
 
-Once the `conda-forge` channel has been enabled, `imagecodecs` can be installed with:
+Once the `conda-forge` channel has been enabled, `imagecodecs, imagecodecs-lite` can be installed with:
 
 ```
-conda install imagecodecs
+conda install imagecodecs imagecodecs-lite
 ```
 
 It is possible to list all of the versions of `imagecodecs` available on your platform with:
