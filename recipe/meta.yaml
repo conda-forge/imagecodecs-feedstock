@@ -14,7 +14,7 @@ build:
 
 outputs:
   - name: imagecodecs
-    script: build.bat  # [win]
+    script: bld.bat  # [win]
     script: build.sh  # [not win] 
     requirements:
       build:
@@ -78,7 +78,8 @@ outputs:
         #   - python ensure_jpegturbo_imagecodecs_plays_nicely_with_jpeg9.py 1
   
   - name: imagecodecs-lite
-    script: "{{ PYTHON }} -m pip install . -vv"
+    script: build-lite.sh  # [not win]
+    script: bld-lite.bat  # [win]
     requirements:
       build:
         - {{ compiler('c') }}
