@@ -21,7 +21,9 @@ requirements:
     - python
     - pip
     # Needs at least numpy 1.15 conda-forge default is 1.14
-    - numpy 1.15
+    # aarch64 and ppc64le have pinnings set to 1.16 for conda-forge
+    - numpy 1.15  # [not (aarch64 or ppc64le)]
+    - numpy       # [     aarch64 or ppc64le ]
     - cython
     - zlib
     - bzip2
