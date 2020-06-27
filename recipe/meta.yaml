@@ -47,11 +47,10 @@ requirements:
     - libtiff
     - lerc
     - zfp
+    - brunsli  # [not win]
     # While jpeg-turbo is the preferred version upstream, the migration
     # to libjpeg-turbo has been contentious on conda-forge
     # - libjpeg-turbo
-    # Things that are not packaged yet
-    # - brunsli
   run:
     - python
     - {{ pin_compatible('numpy') }}
