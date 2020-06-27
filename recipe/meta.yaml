@@ -46,12 +46,12 @@ requirements:
     - snappy
     - libtiff
     - lerc
+    - zfp
     # While jpeg-turbo is the preferred version upstream, the migration
     # to libjpeg-turbo has been contentious on conda-forge
     # - libjpeg-turbo
     # Things that are not packaged yet
     # - brunsli
-    # - zfp
   run:
     - python
     - {{ pin_compatible('numpy') }}

@@ -7,7 +7,7 @@ def customize_build(EXTENSIONS, OPTIONS):
     del EXTENSIONS['jpeg12']
     del EXTENSIONS['jpegxl']
     # del EXTENSIONS['lerc']
-    del EXTENSIONS['zfp']
+    # del EXTENSIONS['zfp']
 
     # build jpeg8 or jpeg9 against libjpeg instead of libjpeg_turbo
     OPTIONS['cythonize'] = True
