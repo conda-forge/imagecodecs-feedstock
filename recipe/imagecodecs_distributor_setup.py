@@ -12,6 +12,7 @@ def customize_build(EXTENSIONS, OPTIONS):
     # build jpeg8 or jpeg9 against libjpeg instead of libjpeg_turbo
     OPTIONS['cythonize'] = True
     EXTENSIONS['jpeg8']['cython_compile_env']['HAVE_LIBJPEG_TURBO'] = False
+    EXTENSIONS['lerc']['libraries'] = ['Lerc']
 
     if sys.platform == 'win32':
         library_inc = os.environ.get('LIBRARY_INC', '')
