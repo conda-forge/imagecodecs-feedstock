@@ -1,17 +1,11 @@
-BUILD:
-- aarch64-conda_cos7-linux-gnu
 bzip2:
 - '1'
 c_compiler:
 - gcc
 c_compiler_version:
 - '7'
-cdt_arch:
-- aarch64
-cdt_name:
-- cos7
 channel_sources:
-- conda-forge
+- conda-forge,defaults
 channel_targets:
 - conda-forge main
 cxx_compiler:
@@ -19,7 +13,7 @@ cxx_compiler:
 cxx_compiler_version:
 - '7'
 docker_image:
-- condaforge/linux-anvil-aarch64
+- condaforge/linux-anvil-comp7
 giflib:
 - '5.2'
 jpeg:
@@ -56,21 +50,20 @@ pin_run_as_build:
     max_pin: x.x
   zlib:
     max_pin: x.x
-  zstd:
-    max_pin: x.x.x
 python:
-- 3.7.* *_cpython
-python_impl:
-- cpython
+- 3.6.* *_cpython
 snappy:
 - '1'
+target_platform:
+- linux-64
 xz:
 - '5.2'
 zip_keys:
+- - c_compiler_version
+  - cxx_compiler_version
 - - numpy
   - python
-  - python_impl
 zlib:
 - '1.2'
 zstd:
-- 1.4.4
+- '1.4'
