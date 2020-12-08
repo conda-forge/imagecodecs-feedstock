@@ -53,8 +53,8 @@ target_platform:
 xz:
 - '5.2'
 zip_keys:
-- - numpy
-  - python
+- - python
+  - numpy
 zlib:
 - '1.2'
 zstd:
