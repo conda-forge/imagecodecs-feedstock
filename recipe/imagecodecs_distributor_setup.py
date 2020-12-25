@@ -19,8 +19,6 @@ def customize_build(EXTENSIONS, OPTIONS):
         # https://github.com/google/brunsli/issues/62
         # https://github.com/google/brunsli/issues/93
         del EXTENSIONS['jpegxl']
-        # https://github.com/conda-forge/libdeflate-feedstock/pull/6
-        del EXTENSIONS['deflate']
         library_inc = os.environ.get('LIBRARY_INC', '')
         EXTENSIONS['bz2']['libraries'] = ['bzip2']
         EXTENSIONS['jpeg2k']['include_dirs'] = [
