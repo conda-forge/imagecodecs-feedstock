@@ -48,8 +48,7 @@ requirements:
     - libtiff
     - lerc
     - zfp
-    # https://github.com/conda-forge/libdeflate-feedstock/pull/6
-    - libdeflate  # [not win]
+    - libdeflate
     - brunsli     # [not win]
     # While jpeg-turbo is the preferred version upstream, the migration
     # to libjpeg-turbo has been contentious on conda-forge
