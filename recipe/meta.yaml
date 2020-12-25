@@ -50,7 +50,7 @@ requirements:
     - zfp
     # https://github.com/conda-forge/libdeflate-feedstock/pull/6
     - libdeflate  # [not win]
-    - brunsli   # [not win]
+    - brunsli     # [not win]
     # While jpeg-turbo is the preferred version upstream, the migration
     # to libjpeg-turbo has been contentious on conda-forge
     # - libjpeg-turbo
