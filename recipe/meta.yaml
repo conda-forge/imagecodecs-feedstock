@@ -82,8 +82,9 @@ about:
   license_family: BSD
   license_file:
     - LICENSE
-    - liblzf-3.6/LICENSE
-    - bitshuffle-0.3.5/LICENSE
+    - 3rdparty/liblzf/LICENSE
+    - 3rdparty/bitshuffle/LICENSE
+    - 3rdparty/openjpeg/LICENSE
   summary: Image transformation, compression, and decompression codecs
   description: |
     The imagecodecs package provides various block-oriented, in-memory buffer
