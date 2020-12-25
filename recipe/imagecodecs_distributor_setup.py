@@ -5,6 +5,8 @@ import sys
 def customize_build(EXTENSIONS, OPTIONS):
     """Customize build for conda-forge."""
     del EXTENSIONS['jpeg12']
+    del EXTENSIONS['avif']
+    del EXTENSIONS['deflate']
 
     # build jpeg8 or jpeg9 against libjpeg instead of libjpeg_turbo
     OPTIONS['cythonize'] = True
