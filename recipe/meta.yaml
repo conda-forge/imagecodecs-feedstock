@@ -37,6 +37,7 @@ requirements:
     - jxrlib
     - jpeg
     - giflib
+    - openjpeg
     - blosc
     - lcms2
     - libaec
