@@ -29,6 +29,7 @@ def customize_build(EXTENSIONS, OPTIONS):
         EXTENSIONS['deflate']['libraries'] = ['libdeflate']
         EXTENSIONS['jpegls']['libraries'] = ['charls-2-x64']
         EXTENSIONS['lz4']['libraries'] = ['liblz4']
+        EXTENSIONS['lz4f']['libraries'] = ['liblz4']
         EXTENSIONS['lzma']['libraries'] = ['liblzma']
         EXTENSIONS['png']['libraries'] = ['libpng', 'z']
         EXTENSIONS['webp']['libraries'] = ['libwebp']
