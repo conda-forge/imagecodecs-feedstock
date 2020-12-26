@@ -26,6 +26,7 @@ def customize_build(EXTENSIONS, OPTIONS):
                 library_inc, 'openjpeg-' + os.environ.get('openjpeg', '2.3')
             )
         ]
+        EXTENSIONS['defalte']['libraries'] = ['libdeflate']
         EXTENSIONS['jpegls']['libraries'] = ['charls-2-x64']
         EXTENSIONS['lz4']['libraries'] = ['liblz4']
         EXTENSIONS['lzma']['libraries'] = ['liblzma']
