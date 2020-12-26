@@ -22,6 +22,8 @@ lz4_c:
 - 1.9.2
 numpy:
 - '1.16'
+openjpeg:
+- '2.3'
 pin_run_as_build:
   bzip2:
     max_pin: x
@@ -33,6 +35,8 @@ pin_run_as_build:
     max_pin: x
   lz4-c:
     max_pin: x.x.x
+  openjpeg:
+    max_pin: x.x
   python:
     min_pin: x.x
     max_pin: x.x
