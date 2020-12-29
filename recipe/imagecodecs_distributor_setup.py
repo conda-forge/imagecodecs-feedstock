@@ -1,6 +1,6 @@
 import os
 import sys
-
+from distutils.version import LooseVersion
 
 def customize_build(EXTENSIONS, OPTIONS):
     """Customize build for conda-forge."""
@@ -13,6 +13,14 @@ def customize_build(EXTENSIONS, OPTIONS):
     EXTENSIONS['lerc']['libraries'] = ['Lerc']
 
     if sys.platform == 'win32':
+        if LooseVersion(os.environ.get('lz4-c', '1.9.2')) < '1.9.3':
+            # Symbol required for lz4f not exported correctly on windows
+            # before 1.9.3
+            # Waiting on migration
+            # https://github.com/conda-forge/conda-forge-pinning-feedstock/pull/1047
+            del EXTENSIONS['lz4f']
+        else:
+            EXTENSIONS['lz4f']['libraries'] = ['liblz4']
         # Windows build of brunsli seem pretty experimental
         # Windows builds seem too experimental upstream
         # https://github.com/google/brunsli/issues/51
@@ -29,7 +37,6 @@ def customize_build(EXTENSIONS, OPTIONS):
         EXTENSIONS['deflate']['libraries'] = ['libdeflate']
         EXTENSIONS['jpegls']['libraries'] = ['charls-2-x64']
         EXTENSIONS['lz4']['libraries'] = ['liblz4']
-        EXTENSIONS['lz4f']['libraries'] = ['liblz4']
         EXTENSIONS['lzma']['libraries'] = ['liblzma']
         EXTENSIONS['png']['libraries'] = ['libpng', 'z']
         EXTENSIONS['webp']['libraries'] = ['libwebp']
