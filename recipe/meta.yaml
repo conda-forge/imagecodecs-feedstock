@@ -1,5 +1,5 @@
 {% set name = "imagecodecs" %}
-{% set version = "2020.5.30" %}
+{% set version = "2020.12.24" %}
 
 package:
   name: {{ name|lower }}
@@ -7,10 +7,11 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: c8c776922d3a60824d8d3d31ba674a250d1b4d429e81349b5c88c34d4353ddb5
+  sha256: bcfb909c38fc0460f24ab75f58c643f2c50a10d0fa49ac07d5ea7b780765e7bd
 
 build:
-  number: 4
+  skip: true  # [py<37]
+  number: 0
 
 requirements:
   build:
@@ -47,6 +48,7 @@ requirements:
     - libtiff
     - lerc
     - zfp
+    - libdeflate
     - brunsli   # [not win]
     # While jpeg-turbo is the preferred version upstream, the migration
     # to libjpeg-turbo has been contentious on conda-forge
@@ -82,9 +84,10 @@ about:
   license_family: BSD
   license_file:
     - LICENSE
-    - liblzf-3.6/LICENSE
-    - bitshuffle-0.3.5/LICENSE
-  summary: 'Image transformation, compression, and decompression codecs'
+    - 3rdparty/liblzf/LICENSE
+    - 3rdparty/bitshuffle/LICENSE
+    - 3rdparty/openjpeg/LICENSE
+  summary: Image transformation, compression, and decompression codecs
   description: |
     The imagecodecs package provides various block-oriented, in-memory buffer
     transformation, compression, and decompression functions for use in the

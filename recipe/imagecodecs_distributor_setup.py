@@ -1,10 +1,11 @@
 import os
 import sys
-
+from distutils.version import LooseVersion
 
 def customize_build(EXTENSIONS, OPTIONS):
     """Customize build for conda-forge."""
     del EXTENSIONS['jpeg12']
+    del EXTENSIONS['avif']
 
     # build jpeg8 or jpeg9 against libjpeg instead of libjpeg_turbo
     OPTIONS['cythonize'] = True
@@ -12,6 +13,14 @@ def customize_build(EXTENSIONS, OPTIONS):
     EXTENSIONS['lerc']['libraries'] = ['Lerc']
 
     if sys.platform == 'win32':
+        if LooseVersion(os.environ['lz4_c']) < '1.9.3':
+            # Symbol required for lz4f not exported correctly on windows
+            # before 1.9.3
+            # Waiting on migration
+            # https://github.com/conda-forge/conda-forge-pinning-feedstock/pull/1047
+            del EXTENSIONS['lz4f']
+        else:
+            EXTENSIONS['lz4f']['libraries'] = ['liblz4']
         # Windows build of brunsli seem pretty experimental
         # Windows builds seem too experimental upstream
         # https://github.com/google/brunsli/issues/51
@@ -20,11 +29,12 @@ def customize_build(EXTENSIONS, OPTIONS):
         del EXTENSIONS['jpegxl']
         library_inc = os.environ.get('LIBRARY_INC', '')
         EXTENSIONS['bz2']['libraries'] = ['bzip2']
-        EXTENSIONS['jpeg2k']['include_dirs'] = [
+        EXTENSIONS['jpeg2k']['include_dirs'] += [
             os.path.join(
                 library_inc, 'openjpeg-' + os.environ.get('openjpeg', '2.3')
             )
         ]
+        EXTENSIONS['deflate']['libraries'] = ['libdeflate']
         EXTENSIONS['jpegls']['libraries'] = ['charls-2-x64']
         EXTENSIONS['lz4']['libraries'] = ['liblz4']
         EXTENSIONS['lzma']['libraries'] = ['liblzma']
