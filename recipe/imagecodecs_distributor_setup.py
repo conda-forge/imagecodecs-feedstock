@@ -13,7 +13,7 @@ def customize_build(EXTENSIONS, OPTIONS):
     EXTENSIONS['lerc']['libraries'] = ['Lerc']
 
     if sys.platform == 'win32':
-        if LooseVersion(os.environ['lz4-c']) < '1.9.3':
+        if LooseVersion(os.environ['lz4_c']) < '1.9.3':
             # Symbol required for lz4f not exported correctly on windows
             # before 1.9.3
             # Waiting on migration
