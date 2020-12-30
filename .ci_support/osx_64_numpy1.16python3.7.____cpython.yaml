@@ -31,7 +31,7 @@ macos_machine:
 numpy:
 - '1.16'
 openjpeg:
-- '2.3'
+- '2.4'
 pin_run_as_build:
   bzip2:
     max_pin: x
