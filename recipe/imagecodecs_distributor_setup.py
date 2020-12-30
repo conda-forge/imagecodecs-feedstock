@@ -31,7 +31,7 @@ def customize_build(EXTENSIONS, OPTIONS):
         EXTENSIONS['bz2']['libraries'] = ['bzip2']
         EXTENSIONS['jpeg2k']['include_dirs'] += [
             os.path.join(
-                library_inc, 'openjpeg-' + os.environ.get('openjpeg', '2.3')
+                library_inc, 'openjpeg-' + os.environ['openjpeg']
             )
         ]
         EXTENSIONS['deflate']['libraries'] = ['libdeflate']
