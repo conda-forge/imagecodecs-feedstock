@@ -19,7 +19,7 @@ conda-build:
 
 CONDARC
 
-conda install --yes --quiet "conda-forge-ci-setup=3" conda-build pip -c conda-forge
+conda install --yes --quiet "conda-forge-ci-setup=3" conda-build pip boa mamba -c conda-forge
 
 # set up the condarc
 setup_conda_rc "${FEEDSTOCK_ROOT}" "${RECIPE_ROOT}" "${CONFIG_FILE}"
@@ -44,7 +44,7 @@ if [[ "${BUILD_WITH_CONDA_DEBUG:-0}" == 1 ]]; then
     # Drop into an interactive shell
     /bin/bash
 else
-    conda build "${RECIPE_ROOT}" -m "${CI_SUPPORT}/${CONFIG}.yaml" \
+    conda mambabuild "${RECIPE_ROOT}" -m "${CI_SUPPORT}/${CONFIG}.yaml" \
         --suppress-variables ${EXTRA_CB_OPTIONS:-} \
         --clobber-file "${CI_SUPPORT}/clobber_${CONFIG}.yaml"
     validate_recipe_outputs "${FEEDSTOCK_NAME}"
