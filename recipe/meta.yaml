@@ -11,7 +11,7 @@ source:
 
 build:
   skip: true  # [py<37]
-  number: 0
+  number: 1
 
 requirements:
   build:
@@ -62,6 +62,7 @@ test:
     - tests
   requires:
     - pytest
+    - pytest-timeout
   # TODO: add these tests when we start to include builds with turbo
   # files:
   #     - 687px-Mona_Lisa,_by_Leonardo_da_Vinci,_from_C2RMF_retouched.jpg
