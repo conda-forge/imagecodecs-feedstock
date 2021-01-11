@@ -75,7 +75,8 @@ test:
     - imagecodecs._imagecodecs
   commands:
     - cd tests
-    - python test_imagecodecs.py
+    - pytest -vv --timeout=100 . 
+  #   - python test_imagecodecs.py
   #   - python ensure_jpegturbo_imagecodecs_plays_nicely_with_jpeg9.py 0
   #   - python ensure_jpegturbo_imagecodecs_plays_nicely_with_jpeg9.py 1
 
