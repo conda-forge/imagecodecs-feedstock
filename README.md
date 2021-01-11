@@ -22,7 +22,6 @@ ZStandard, Blosc, LZMA, BZ2, LZ4, LZW, LZF, PNG, WebP, JPEG 8-bit,
 JPEG 12-bit, JPEG SOF=0xC3, JPEG 2000, JPEG XR, PackBits, Packed Integers,
 Delta, XOR Delta, Floating Point Predictor, and Bitorder reversal.
 
-
 Current build status
 ====================
 
