@@ -23,6 +23,7 @@ JPEG 12-bit, JPEG SOF=0xC3, JPEG 2000, JPEG XR, PackBits, Packed Integers,
 Delta, XOR Delta, Floating Point Predictor, and Bitorder reversal.
 
 
+
 Current build status
 ====================
 
