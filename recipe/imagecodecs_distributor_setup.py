@@ -37,8 +37,14 @@ def customize_build(EXTENSIONS, OPTIONS):
             os.path.join(os.environ['LIBRARY_INC'], 'jxrlib')
         ]
         EXTENSIONS['jpegxr']['libraries'] = ['libjpegxr', 'libjxrglue']
+        EXTENSIONS['zopfli']['include_dirs'] = [
+            os.path.join(os.environ['LIBRARY_INC'], 'zopfli')
+        ]
     else:
         EXTENSIONS['jpegxr']['include_dirs'] = [
             os.path.join(os.environ['PREFIX'], 'include', 'jxrlib')
         ]
         EXTENSIONS['jpegxr']['libraries'] = ['jpegxr', 'jxrglue']
+        EXTENSIONS['zopfli']['include_dirs'] = [
+            os.path.join(os.environ['PREFIX'], 'include', 'zopfli')
+        ]
