@@ -21,11 +21,11 @@ jpeg:
 libpng:
 - '1.6'
 libtiff:
-- 4.1.0
+- '4'
 libwebp:
 - '1.1'
 lz4_c:
-- 1.9.2
+- 1.9.3
 macos_machine:
 - x86_64-apple-darwin13.4.0
 numpy:
