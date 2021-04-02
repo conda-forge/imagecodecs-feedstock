@@ -1,19 +1,21 @@
-MACOSX_DEPLOYMENT_TARGET:
-- '10.9'
 bzip2:
 - '1'
 c_compiler:
-- clang
+- gcc
 c_compiler_version:
-- '11'
+- '9'
+cdt_name:
+- cos7
 channel_sources:
 - conda-forge,defaults
 channel_targets:
 - conda-forge main
 cxx_compiler:
-- clangxx
+- gxx
 cxx_compiler_version:
-- '11'
+- '9'
+docker_image:
+- quay.io/condaforge/linux-anvil-ppc64le
 giflib:
 - '5.2'
 jpeg:
@@ -26,10 +28,8 @@ libwebp:
 - '1.1'
 lz4_c:
 - 1.9.3
-macos_machine:
-- x86_64-apple-darwin13.4.0
 numpy:
-- '1.16'
+- '1.17'
 openjpeg:
 - '2.4'
 pin_run_as_build:
@@ -57,7 +57,7 @@ python:
 snappy:
 - '1'
 target_platform:
-- osx-64
+- linux-ppc64le
 xz:
 - '5.2'
 zip_keys:
