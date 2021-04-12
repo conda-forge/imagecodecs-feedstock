@@ -73,7 +73,7 @@ test:
   commands:
     # Don't include the tests as a `source_file` since it
     # adds them to the recipe and blows up the size of the final package.
-    - cp -R %SRC_DIR%/tests .                      # [unix]
+    - cp -R {{ SRC_DIR }}/tests .                  # [unix]
     - xcopy /E /I {{ SRC_DIR }}\tests tests        # [win]
     - cd tests
     - python test_imagecodecs.py
