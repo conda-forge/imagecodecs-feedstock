@@ -11,7 +11,7 @@ source:
 
 build:
   skip: true  # [py<37]
-  number: 0
+  number: 1
 
 requirements:
   build:
@@ -58,8 +58,6 @@ requirements:
     - {{ pin_compatible('numpy') }}
 
 test:
-  source_files:
-    - tests
   requires:
     - pytest
   # TODO: add these tests when we start to include builds with turbo
@@ -73,6 +71,10 @@ test:
     - imagecodecs
     - imagecodecs._imagecodecs
   commands:
+    # Don't include the tests as a `source_file` since it
+    # adds them to the recipe and blows up the size of the final package.
+    - cp -R %SRC_DIR%/tests .                      # [unix]
+    - xcopy /E /I {{ SRC_DIR }}\tests tests        # [win]
     - cd tests
     - python test_imagecodecs.py
   #   - python ensure_jpegturbo_imagecodecs_plays_nicely_with_jpeg9.py 0
