@@ -1,5 +1,5 @@
 {% set name = "imagecodecs" %}
-{% set version = "2021.3.31" %}
+{% set version = "2021.6.8" %}
 
 package:
   name: {{ name|lower }}
@@ -7,11 +7,11 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 20de74033058105ef07218bf7ab2ec550c05a3e6bd5581d9daa6346e16d5f760
+  sha256: 4b2799ee39a3bc465d2068b70dc6eb643aa4817435d3ef38cc087f5e863dc9da
 
 build:
   skip: true  # [py<37]
-  number: 1
+  number: 0
 
 requirements:
   build:
