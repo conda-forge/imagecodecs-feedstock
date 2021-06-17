@@ -10,6 +10,8 @@ cdt_arch:
 - aarch64
 cdt_name:
 - cos7
+cfitsio:
+- '3.470'
 channel_sources:
 - conda-forge
 channel_targets:
