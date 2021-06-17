@@ -1,5 +1,5 @@
 {% set name = "imagecodecs" %}
-{% set version = "2021.3.31" %}
+{% set version = "2021.4.28" %}
 
 package:
   name: {{ name|lower }}
@@ -7,11 +7,11 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 20de74033058105ef07218bf7ab2ec550c05a3e6bd5581d9daa6346e16d5f760
+  sha256: 26ffa26b884fb03b93aba9e2222ede6a388bd862683d6c19bb53fc8094ff4a3d
 
 build:
   skip: true  # [py<37]
-  number: 1
+  number: 0
 
 requirements:
   build:
@@ -74,7 +74,10 @@ test:
     - imagecodecs._imagecodecs
   commands:
     - cd tests
-    - python test_imagecodecs.py
+    # 20210717 hmaarrfk: This test seems to be flaky in the upstream
+    # test procedure
+    # https://github.com/conda-forge/imagecodecs-feedstock/pull/32#issuecomment-863041029
+    - python test_imagecodecs.py -k "not test_image_roundtrips[jpeg2k-uint16-rgb-out-bytearray-None]"
   #   - python ensure_jpegturbo_imagecodecs_plays_nicely_with_jpeg9.py 0
   #   - python ensure_jpegturbo_imagecodecs_plays_nicely_with_jpeg9.py 1
 
