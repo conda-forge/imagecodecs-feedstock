@@ -2,6 +2,8 @@ bzip2:
 - '1'
 c_compiler:
 - vs2017
+cfitsio:
+- '3.470'
 channel_sources:
 - conda-forge,defaults
 channel_targets:

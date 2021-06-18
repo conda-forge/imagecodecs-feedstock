@@ -1,5 +1,5 @@
 {% set name = "imagecodecs" %}
-{% set version = "2021.4.28" %}
+{% set version = "2021.6.8" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 26ffa26b884fb03b93aba9e2222ede6a388bd862683d6c19bb53fc8094ff4a3d
+  sha256: 4b2799ee39a3bc465d2068b70dc6eb643aa4817435d3ef38cc087f5e863dc9da
 
 build:
   skip: true  # [py<37]
@@ -49,6 +49,7 @@ requirements:
     - lerc
     - zfp
     - libdeflate
+    - cfitsio
     - brunsli   # [not win]
     # While jpeg-turbo is the preferred version upstream, the migration
     # to libjpeg-turbo has been contentious on conda-forge
