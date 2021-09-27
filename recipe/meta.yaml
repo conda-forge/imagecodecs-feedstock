@@ -8,6 +8,8 @@ package:
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
   sha256: e87994d918ea951a589ec46648c24d9c7e56b7b5c2466d93f3b07883f0ecea19
+  patches:
+    - 0001-Disable-blosc2-for-conda-forge.patch
 
 build:
   skip: true  # [py<37]
@@ -39,7 +41,11 @@ requirements:
     - giflib
     - openjpeg
     - blosc
-    - c-blosc2
+    # c-bloc2 2.0.3 broke support for many python libraries
+    # https://github.com/conda-forge/imagecodecs-feedstock/pull/37#issuecomment-928072055
+    # https://github.com/Blosc/c-blosc2/pull/338
+    # https://github.com/Blosc/c-blosc2/issues/356
+    # - c-blosc2 !=2.0.3
     - lcms2
     - libaec
     - brotli
