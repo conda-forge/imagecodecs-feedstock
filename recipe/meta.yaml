@@ -46,7 +46,9 @@ requirements:
     - charls
     - snappy
     - libtiff
-    - lerc
+    # TODO: remove this when the conda-forge migration goes through
+    # https://github.com/conda-forge/conda-forge-pinning-feedstock/pull/1932
+    - lerc 3
     - zfp
     - libdeflate
     - cfitsio
