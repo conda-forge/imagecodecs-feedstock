@@ -46,7 +46,7 @@ requirements:
     - charls
     - snappy
     - libtiff
-    - lerc
+    - lerc 2
     - zfp
     - libdeflate
     - cfitsio
