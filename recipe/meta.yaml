@@ -39,7 +39,7 @@ requirements:
     - giflib
     - openjpeg
     - blosc
-    - c-blosc2 !=2.0.3
+    - c-blosc2 >=2.0.4
     - lcms2
     - libaec
     - brotli
