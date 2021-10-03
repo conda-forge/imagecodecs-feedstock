@@ -1,5 +1,5 @@
 {% set name = "imagecodecs" %}
-{% set version = "2021.7.30" %}
+{% set version = "2021.8.26" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 57b4db34718764d77c5ce200f05f387bd68874788ea54fc4c9549215ca68f013
+  sha256: e87994d918ea951a589ec46648c24d9c7e56b7b5c2466d93f3b07883f0ecea19
 
 build:
   skip: true  # [py<37]
@@ -39,6 +39,7 @@ requirements:
     - giflib
     - openjpeg
     - blosc
+    - c-blosc2 >=2.0.4
     - lcms2
     - libaec
     - brotli
@@ -46,7 +47,9 @@ requirements:
     - charls
     - snappy
     - libtiff
-    - lerc 2
+    # TODO: remove this when the conda-forge migration is accepted
+    # https://github.com/conda-forge/conda-forge-pinning-feedstock/pull/1932
+    - lerc 3
     - zfp
     - libdeflate
     - cfitsio
@@ -79,8 +82,8 @@ test:
     # test procedure
     # https://github.com/conda-forge/imagecodecs-feedstock/pull/32#issuecomment-863041029
     - python test_imagecodecs.py -k "not test_image_roundtrips[jpeg2k-uint16-rgb-out-bytearray-None]"
-  #   - python ensure_jpegturbo_imagecodecs_plays_nicely_with_jpeg9.py 0
-  #   - python ensure_jpegturbo_imagecodecs_plays_nicely_with_jpeg9.py 1
+    # - python ensure_jpegturbo_imagecodecs_plays_nicely_with_jpeg9.py 0
+    # - python ensure_jpegturbo_imagecodecs_plays_nicely_with_jpeg9.py 1
 
 about:
   home: https://www.lfd.uci.edu/~gohlke/
