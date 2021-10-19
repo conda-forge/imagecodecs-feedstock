@@ -3,7 +3,7 @@ bzip2:
 c_compiler:
 - vs2017
 cfitsio:
-- '3.470'
+- 4.0.0
 channel_sources:
 - conda-forge
 channel_targets:
