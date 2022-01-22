@@ -61,7 +61,10 @@ requirements:
     - python
     - {{ pin_compatible('numpy') }}
 
+
 test:
+# Running the full test suite adds about 17 MB of files...
+{% if false %}
   source_files:
     - tests
   requires:
@@ -73,9 +76,6 @@ test:
   # requires:
   #   - pillow
   #   - opencv
-  imports:
-    - imagecodecs
-    - imagecodecs._imagecodecs
   commands:
     - cd tests
     # 20210717 hmaarrfk: This test seems to be flaky in the upstream
@@ -84,6 +84,10 @@ test:
     - python test_imagecodecs.py -k "not test_image_roundtrips[jpeg2k-uint16-rgb-out-bytearray-None]"
     # - python ensure_jpegturbo_imagecodecs_plays_nicely_with_jpeg9.py 0
     # - python ensure_jpegturbo_imagecodecs_plays_nicely_with_jpeg9.py 1
+{% endif %}
+  imports:
+    - imagecodecs
+    - imagecodecs._imagecodecs
 
 about:
   home: https://www.lfd.uci.edu/~gohlke/
