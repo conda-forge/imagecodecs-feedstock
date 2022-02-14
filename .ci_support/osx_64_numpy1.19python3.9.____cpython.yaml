@@ -20,6 +20,8 @@ giflib:
 - '5.2'
 jpeg:
 - '9'
+libdeflate:
+- '1.10'
 libpng:
 - '1.6'
 libtiff:
