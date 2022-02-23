@@ -47,6 +47,7 @@ requirements:
     - charls
     - snappy
     - libtiff
+    - libavif
     # TODO: remove this when the conda-forge migration is accepted
     # https://github.com/conda-forge/conda-forge-pinning-feedstock/pull/1932
     - lerc 3
