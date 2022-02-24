@@ -1,5 +1,5 @@
 {% set name = "imagecodecs" %}
-{% set version = "2021.11.20" %}
+{% set version = "2022.2.22" %}
 
 package:
   name: {{ name|lower }}
@@ -7,11 +7,11 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 04b378ddaafa3178d079b1a84f3d8fdce0980f85a17b89cb6c68bf3de687293c
+  sha256: 062bef6b003290a8163abed2744b406854238208dfdd41cf7165253c6e01c0bd
 
 build:
-  skip: true  # [py<37]
-  number: 2
+  skip: true  # [py<38]
+  number: 0
 
 requirements:
   build:
@@ -47,6 +47,7 @@ requirements:
     - charls
     - snappy
     - libtiff
+    - libavif
     # TODO: remove this when the conda-forge migration is accepted
     # https://github.com/conda-forge/conda-forge-pinning-feedstock/pull/1932
     - lerc 3
