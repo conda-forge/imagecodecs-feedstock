@@ -1,8 +1,7 @@
-migrator_ts: 1649349689
 __migrator:
+  build_number: 1
   kind: version
   migration_number: 1
-  bump_number: 1
-
 libavif:
-  - '0.9.3'
+- 0.10.0
+migrator_ts: 1649408491.6758099
