@@ -47,8 +47,6 @@ pin_run_as_build:
     max_pin: x.x
   libtiff:
     max_pin: x
-  lz4-c:
-    max_pin: x.x.x
   openjpeg:
     max_pin: x.x
   python:
