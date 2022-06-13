@@ -17,7 +17,7 @@ jpeg:
 libavif:
 - 0.10.1
 libdeflate:
-- '1.10'
+- '1.12'
 libpng:
 - '1.6'
 libtiff:
