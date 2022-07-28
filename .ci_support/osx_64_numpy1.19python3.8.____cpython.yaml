@@ -21,7 +21,7 @@ giflib:
 jpeg:
 - '9'
 lerc:
-- '3'
+- '4'
 libavif:
 - 0.10.1
 libdeflate:
