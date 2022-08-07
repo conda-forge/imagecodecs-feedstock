@@ -1,0 +1,13 @@
+diff --git a/imagecodecs/zfp.pxd b/imagecodecs/zfp.pxd
+index d65e25c..c694219 100644
+--- a/imagecodecs/zfp.pxd
++++ b/imagecodecs/zfp.pxd
+@@ -4,7 +4,7 @@
+ # Cython declarations for the `zfp 0.5.5` library.
+ # https://github.com/LLNL/zfp
+ 
+-cdef extern from 'bitstream.h':
++cdef extern from 'zfp/bitstream.h':
+ 
+     ctypedef struct bitstream:
+         pass

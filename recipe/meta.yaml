@@ -8,6 +8,8 @@ package:
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
   sha256: d6336e17849f355965157d880ba6bf3f334ae48d5124097916050b4985eca02f
+  patches:
+    - zfp1.patch
 
 build:
   skip: true  # [py<38]
