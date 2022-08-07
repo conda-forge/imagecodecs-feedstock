@@ -58,6 +58,8 @@ target_platform:
 - win-64
 xz:
 - '5.2'
+zfp:
+- '1.0'
 zip_keys:
 - - python
   - numpy

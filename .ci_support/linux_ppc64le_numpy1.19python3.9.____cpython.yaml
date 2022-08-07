@@ -66,6 +66,8 @@ target_platform:
 - linux-ppc64le
 xz:
 - '5.2'
+zfp:
+- '1.0'
 zip_keys:
 - - c_compiler_version
   - cxx_compiler_version
