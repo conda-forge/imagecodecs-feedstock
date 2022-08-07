@@ -70,6 +70,8 @@ target_platform:
 - linux-aarch64
 xz:
 - '5.2'
+zfp:
+- '0.5'
 zip_keys:
 - - c_compiler_version
   - cxx_compiler_version
