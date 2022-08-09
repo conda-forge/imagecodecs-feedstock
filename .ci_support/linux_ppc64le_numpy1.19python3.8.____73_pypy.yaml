@@ -1,0 +1,79 @@
+bzip2:
+- '1'
+c_compiler:
+- gcc
+c_compiler_version:
+- '10'
+cdt_name:
+- cos7
+cfitsio:
+- 4.1.0
+channel_sources:
+- conda-forge
+channel_targets:
+- conda-forge main
+cxx_compiler:
+- gxx
+cxx_compiler_version:
+- '10'
+docker_image:
+- quay.io/condaforge/linux-anvil-cos7-x86_64
+giflib:
+- '5.2'
+jpeg:
+- '9'
+lerc:
+- '4'
+libavif:
+- 0.10.1
+libdeflate:
+- '1.13'
+libpng:
+- '1.6'
+libtiff:
+- '4'
+libwebp:
+- '1'
+lz4_c:
+- 1.9.3
+numpy:
+- '1.19'
+openjpeg:
+- '2.4'
+pin_run_as_build:
+  bzip2:
+    max_pin: x
+  jpeg:
+    max_pin: x
+  libpng:
+    max_pin: x.x
+  libtiff:
+    max_pin: x
+  openjpeg:
+    max_pin: x.x
+  python:
+    min_pin: x.x
+    max_pin: x.x
+  xz:
+    max_pin: x.x
+  zlib:
+    max_pin: x.x
+python:
+- 3.8.* *_73_pypy
+snappy:
+- '1'
+target_platform:
+- linux-ppc64le
+xz:
+- '5.2'
+zfp:
+- '1.0'
+zip_keys:
+- - c_compiler_version
+  - cxx_compiler_version
+- - python
+  - numpy
+zlib:
+- '1.2'
+zstd:
+- '1.5'
