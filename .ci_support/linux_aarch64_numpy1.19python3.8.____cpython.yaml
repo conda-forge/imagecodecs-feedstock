@@ -31,7 +31,7 @@ lerc:
 libavif:
 - 0.10.1
 libdeflate:
-- '1.13'
+- '1.14'
 libpng:
 - '1.6'
 libtiff:
