@@ -1,7 +1,7 @@
 bzip2:
 - '1'
 c_compiler:
-- vs2017
+- vs2019
 cfitsio:
 - 4.1.0
 channel_sources:
@@ -9,7 +9,7 @@ channel_sources:
 channel_targets:
 - conda-forge main
 cxx_compiler:
-- vs2017
+- vs2019
 giflib:
 - '5.2'
 jpeg:
@@ -19,7 +19,7 @@ lerc:
 libavif:
 - 0.10.1
 libdeflate:
-- '1.13'
+- '1.14'
 libpng:
 - '1.6'
 libtiff:
