@@ -1,5 +1,5 @@
 MACOSX_DEPLOYMENT_TARGET:
-- '10.9'
+- '11.0'
 bzip2:
 - '1'
 c_compiler:
@@ -35,37 +35,23 @@ libwebp:
 lz4_c:
 - 1.9.3
 macos_machine:
-- x86_64-apple-darwin13.4.0
+- arm64-apple-darwin20.0.0
 numpy:
-- '1.19'
+- '1.20'
 openjpeg:
-- '2.5'
+- '2'
 pin_run_as_build:
-  bzip2:
-    max_pin: x
-  jpeg:
-    max_pin: x
-  libpng:
-    max_pin: x.x
-  libtiff:
-    max_pin: x
-  openjpeg:
-    max_pin: x.x
   python:
     min_pin: x.x
-    max_pin: x.x
-  xz:
-    max_pin: x.x
-  zlib:
     max_pin: x.x
 python:
 - 3.8.* *_cpython
 snappy:
 - '1'
 target_platform:
-- osx-64
+- osx-arm64
 xz:
-- '5.2'
+- '5'
 zfp:
 - '1.0'
 zip_keys:
