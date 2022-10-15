@@ -25,7 +25,7 @@ jpeg:
 lerc:
 - '4'
 libavif:
-- 0.10.1
+- 0.11.0
 libdeflate:
 - '1.14'
 libpng:
