@@ -21,7 +21,7 @@ cxx_compiler:
 cxx_compiler_version:
 - '10'
 docker_image:
-- quay.io/condaforge/linux-anvil-cos7-x86_64
+- quay.io/condaforge/linux-anvil-aarch64
 giflib:
 - '5.2'
 jpeg:
@@ -29,7 +29,7 @@ jpeg:
 lerc:
 - '4'
 libavif:
-- 0.10.1
+- 0.11.0
 libdeflate:
 - '1.14'
 libpng:
