@@ -8,10 +8,11 @@ package:
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
   sha256: c5282a808786dadb8e3ee238bb213b2e065574f1bb0f4b51e8bf93747e0babb3
+  patches:
+    - libdeflate-deflate.patch
 
 build:
-  skip: true  # [py<38]
-  number: 0
+  number: 1
 
 requirements:
   build:
