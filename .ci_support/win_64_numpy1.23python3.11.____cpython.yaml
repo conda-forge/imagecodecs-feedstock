@@ -16,10 +16,12 @@ jpeg:
 - '9'
 lerc:
 - '4'
+libaec:
+- '1'
 libavif:
 - 0.11.1
 libdeflate:
-- '1.16'
+- '1.17'
 libpng:
 - '1.6'
 libtiff:
