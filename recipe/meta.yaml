@@ -1,5 +1,5 @@
 {% set name = "imagecodecs" %}
-{% set version = "2022.12.24" %}
+{% set version = "2023.1.23" %}
 
 package:
   name: {{ name|lower }}
@@ -7,12 +7,12 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: c5282a808786dadb8e3ee238bb213b2e065574f1bb0f4b51e8bf93747e0babb3
+  sha256: 1b4591839a2f5c90467e50ebe54117cbd9be42c18864abdf85fc7743223ac5b2
   patches:
     - libdeflate-deflate.patch
 
 build:
-  number: 2
+  number: 0
 
 requirements:
   build:
