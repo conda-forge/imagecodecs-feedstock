@@ -8,9 +8,11 @@ package:
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
   sha256: 1b4591839a2f5c90467e50ebe54117cbd9be42c18864abdf85fc7743223ac5b2
+  patches:
+    - build_with_turbo.patch
 
 build:
-  number: 0
+  number: 1
 
 requirements:
   build:
@@ -34,7 +36,7 @@ requirements:
     - libpng
     - libwebp
     - jxrlib
-    - jpeg
+    - libjpeg-turbo
     - giflib
     - openjpeg
     - blosc
@@ -52,9 +54,6 @@ requirements:
     - libdeflate
     - cfitsio
     - brunsli   # [not win]
-    # While jpeg-turbo is the preferred version upstream, the migration
-    # to libjpeg-turbo has been contentious on conda-forge
-    # - libjpeg-turbo
   run:
     - python
     - {{ pin_compatible('numpy') }}
@@ -67,21 +66,12 @@ test:
     - tests
   requires:
     - pytest
-  # TODO: add these tests when we start to include builds with turbo
-  # files:
-  #     - 687px-Mona_Lisa,_by_Leonardo_da_Vinci,_from_C2RMF_retouched.jpg
-  #     - ensure_jpegturbo_imagecodecs_plays_nicely_with_jpeg9.py
-  # requires:
-  #   - pillow
-  #   - opencv
   commands:
     - cd tests
     # 20210717 hmaarrfk: This test seems to be flaky in the upstream
     # test procedure
     # https://github.com/conda-forge/imagecodecs-feedstock/pull/32#issuecomment-863041029
     - python test_imagecodecs.py -k "not test_image_roundtrips[jpeg2k-uint16-rgb-out-bytearray-None]"
-    # - python ensure_jpegturbo_imagecodecs_plays_nicely_with_jpeg9.py 0
-    # - python ensure_jpegturbo_imagecodecs_plays_nicely_with_jpeg9.py 1
 {% endif %}
   imports:
     - imagecodecs

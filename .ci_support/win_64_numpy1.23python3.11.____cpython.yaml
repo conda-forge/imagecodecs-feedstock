@@ -12,8 +12,6 @@ cxx_compiler:
 - vs2019
 giflib:
 - '5.2'
-jpeg:
-- '9'
 lerc:
 - '4'
 libaec:
@@ -22,6 +20,8 @@ libavif:
 - 0.11.1
 libdeflate:
 - '1.17'
+libjpeg_turbo:
+- 2.1.5
 libpng:
 - '1.6'
 libtiff:
