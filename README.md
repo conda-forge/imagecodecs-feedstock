@@ -1,11 +1,11 @@
-About imagecodecs
-=================
+About imagecodecs-feedstock
+===========================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/imagecodecs-feedstock/blob/main/LICENSE.txt)
 
 Home: https://www.lfd.uci.edu/~gohlke/
 
 Package license: BSD-3-Clause
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/imagecodecs-feedstock/blob/main/LICENSE.txt)
 
 Summary: Image transformation, compression, and decompression codecs
 
