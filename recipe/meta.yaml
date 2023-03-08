@@ -10,7 +10,7 @@ source:
   sha256: 1b4591839a2f5c90467e50ebe54117cbd9be42c18864abdf85fc7743223ac5b2
 
 build:
-  number: 0
+  number: 1
 
 requirements:
   build:
@@ -34,7 +34,7 @@ requirements:
     - libpng
     - libwebp
     - jxrlib
-    - jpeg
+    - libjpeg-turbo
     - giflib
     - openjpeg
     - blosc
@@ -52,7 +52,7 @@ requirements:
     - libdeflate
     - cfitsio
     - brunsli   # [not win]
-    # While jpeg-turbo is the preferred version upstream, the migration
+    # While libjpeg-turbo -turbo is the preferred version upstream, the migration
     # to libjpeg-turbo has been contentious on conda-forge
     # - libjpeg-turbo
   run:
