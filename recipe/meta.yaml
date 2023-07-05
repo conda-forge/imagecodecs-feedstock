@@ -53,6 +53,7 @@ requirements:
     - zfp
     - libdeflate
     - cfitsio
+    - sz
     - brunsli   # [not win]
   run:
     - python
