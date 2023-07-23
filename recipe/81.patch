@@ -1,0 +1,21 @@
+From e77627dab17069655b1b1a5dfcf84db936bf9e6a Mon Sep 17 00:00:00 2001
+From: Mark Harfouche <mark.harfouche@gmail.com>
+Date: Sun, 23 Jul 2023 09:03:51 -0400
+Subject: [PATCH] Correctly link szip for conda-forge
+
+---
+ setup.py | 1 +
+ 1 file changed, 1 insertion(+)
+
+diff --git a/setup.py b/setup.py
+index db20aad..7ea0d3c 100644
+--- a/setup.py
++++ b/setup.py
+@@ -481,6 +481,7 @@ def customize_build_condaforge(EXTENSIONS, OPTIONS):
+             os.path.join(os.environ['LIBRARY_INC'], 'jxrlib')
+         ]
+         EXTENSIONS['jpegxr']['libraries'] = ['libjpegxr', 'libjxrglue']
++        EXTENSIONS['szip']['libraries'] = ['szip']
+     else:
+         EXTENSIONS['zopfli']['include_dirs'] = [
+             os.path.join(os.environ['PREFIX'], 'include', 'zopfli')
