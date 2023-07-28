@@ -12,7 +12,7 @@ source:
     - 81.patch
 
 build:
-  number: 0
+  number: 1
   skip: true  # [py<39]
 
 requirements:
