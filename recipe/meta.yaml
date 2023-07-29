@@ -12,7 +12,7 @@ source:
     - 81.patch
 
 build:
-  number: 1
+  number: 2
   skip: true  # [py<39]
 
 requirements:
@@ -53,7 +53,6 @@ requirements:
     - lerc
     - zfp
     - libdeflate
-    - cfitsio
     - brunsli   # [not win]
   run:
     - python
