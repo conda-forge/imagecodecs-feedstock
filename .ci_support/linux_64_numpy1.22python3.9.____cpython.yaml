@@ -37,7 +37,7 @@ libwebp:
 lz4_c:
 - 1.9.3
 numpy:
-- '1.21'
+- '1.22'
 openjpeg:
 - '2'
 pin_run_as_build:

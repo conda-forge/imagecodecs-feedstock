@@ -1,13 +1,19 @@
+MACOSX_DEPLOYMENT_TARGET:
+- '10.9'
 bzip2:
 - '1'
 c_compiler:
-- vs2019
+- clang
+c_compiler_version:
+- '15'
 channel_sources:
 - conda-forge
 channel_targets:
 - conda-forge main
 cxx_compiler:
-- vs2019
+- clangxx
+cxx_compiler_version:
+- '15'
 giflib:
 - '5.2'
 lerc:
@@ -28,8 +34,10 @@ libwebp:
 - '1'
 lz4_c:
 - 1.9.3
+macos_machine:
+- x86_64-apple-darwin13.4.0
 numpy:
-- '1.21'
+- '1.22'
 openjpeg:
 - '2'
 pin_run_as_build:
@@ -41,12 +49,14 @@ python:
 snappy:
 - '1'
 target_platform:
-- win-64
+- osx-64
 xz:
 - '5'
 zfp:
 - '1.0'
 zip_keys:
+- - c_compiler_version
+  - cxx_compiler_version
 - - python
   - numpy
 zlib:
