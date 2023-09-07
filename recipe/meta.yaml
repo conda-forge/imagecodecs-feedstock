@@ -52,7 +52,7 @@ requirements:
     - zfp
     - libdeflate
     - brunsli   # [not win]
-    - libavif
+    - libavif 1
   run:
     - python
     - {{ pin_compatible('numpy') }}
