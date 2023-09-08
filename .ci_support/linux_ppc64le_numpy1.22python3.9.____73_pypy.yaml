@@ -1,11 +1,11 @@
-MACOSX_DEPLOYMENT_TARGET:
-- '10.9'
 bzip2:
 - '1'
 c_compiler:
-- clang
+- gcc
 c_compiler_version:
-- '14'
+- '12'
+cdt_name:
+- cos7
 cfitsio:
 - 4.2.0
 channel_sources:
@@ -13,9 +13,11 @@ channel_sources:
 channel_targets:
 - conda-forge main
 cxx_compiler:
-- clangxx
+- gxx
 cxx_compiler_version:
-- '14'
+- '12'
+docker_image:
+- quay.io/condaforge/linux-anvil-cos7-x86_64
 giflib:
 - '5.2'
 lerc:
@@ -23,9 +25,9 @@ lerc:
 libaec:
 - '1'
 libavif:
-- 0.11.1
+- 1.0.1
 libdeflate:
-- '1.17'
+- '1.18'
 libjpeg_turbo:
 - 2.1.5
 libpng:
@@ -36,10 +38,8 @@ libwebp:
 - '1'
 lz4_c:
 - 1.9.3
-macos_machine:
-- x86_64-apple-darwin13.4.0
 numpy:
-- '1.21'
+- '1.22'
 openjpeg:
 - '2'
 pin_run_as_build:
@@ -47,11 +47,11 @@ pin_run_as_build:
     min_pin: x.x
     max_pin: x.x
 python:
-- 3.10.* *_cpython
+- 3.9.* *_73_pypy
 snappy:
 - '1'
 target_platform:
-- osx-64
+- linux-ppc64le
 xz:
 - '5'
 zfp:
