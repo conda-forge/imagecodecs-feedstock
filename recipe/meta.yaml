@@ -8,9 +8,11 @@ package:
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
   sha256: fde46bd698d008255deef5411c59b35c0e875295e835bf6079f7e2ab22f216eb
+  patches:              # [unix and not ppc64le]
+    - allow_jxl.patch   # [unix and not ppc64le]
 
 build:
-  number: 0
+  number: 1
   skip: true  # [py<39]
 
 requirements:
@@ -38,8 +40,14 @@ requirements:
     - libjpeg-turbo
     - giflib
     - openjpeg
+    # hmaarrfk - 2024/03/06
+    # I have compilation errors on windows (I think it is due to the fact that the libraries are statically linked)
+    # https://github.com/conda-forge/libjxl-split-feedstock/issues/19
+    # And ppc64le has ICE errors for libjxl
+    # https://github.com/conda-forge/libjxl-split-feedstock/issues/20
+    - libjxl  # [unix and not ppc64le]
     - blosc
-    - c-blosc2 >=2.0.4
+    - c-blosc2
     - lcms2
     - libaec
     - brotli
