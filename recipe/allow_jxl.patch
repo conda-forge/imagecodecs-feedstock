@@ -10,11 +10,3 @@ index e527a75..1248868 100644
      del EXTENSIONS['lzfse']
      del EXTENSIONS['lzham']
      del EXTENSIONS['lzo']
-@@ -482,6 +481,7 @@ def customize_build_condaforge(EXTENSIONS, OPTIONS):
-                 os.environ['LIBRARY_INC'], 'openjpeg-' + os.environ['openjpeg']
-             )
-         ]
-+        EXTENSIONS['jpegxl']['libraries'] = ['jxl', 'jxl_threads']
-         EXTENSIONS['jpegls']['libraries'] = ['charls-2-x64']
-         EXTENSIONS['lz4']['libraries'] = ['liblz4']
-         EXTENSIONS['lzma']['libraries'] = ['liblzma']
