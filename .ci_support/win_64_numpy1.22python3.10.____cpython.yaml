@@ -10,6 +10,8 @@ cxx_compiler:
 - vs2019
 giflib:
 - '5.2'
+lcms2:
+- '2'
 lerc:
 - '4'
 libaec:

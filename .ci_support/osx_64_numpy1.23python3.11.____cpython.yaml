@@ -16,6 +16,8 @@ cxx_compiler_version:
 - '16'
 giflib:
 - '5.2'
+lcms2:
+- '2'
 lerc:
 - '4'
 libaec:
@@ -26,6 +28,8 @@ libdeflate:
 - '1.19'
 libjpeg_turbo:
 - '3'
+libjxl:
+- '0.10'
 libpng:
 - '1.6'
 libtiff:
