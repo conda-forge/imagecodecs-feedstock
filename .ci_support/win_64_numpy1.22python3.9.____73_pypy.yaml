@@ -19,7 +19,7 @@ libaec:
 libavif:
 - 1.0.1
 libdeflate:
-- '1.19'
+- '1.20'
 libjpeg_turbo:
 - '3'
 libpng:
