@@ -4,6 +4,10 @@ c_compiler:
 - gcc
 c_compiler_version:
 - '12'
+c_stdlib:
+- sysroot
+c_stdlib_version:
+- '2.17'
 cdt_name:
 - cos7
 channel_sources:
@@ -49,7 +53,7 @@ pin_run_as_build:
 python:
 - 3.9.* *_cpython
 snappy:
-- '1'
+- '1.2'
 target_platform:
 - linux-ppc64le
 xz:
@@ -59,6 +63,8 @@ zfp:
 zip_keys:
 - - c_compiler_version
   - cxx_compiler_version
+- - c_stdlib_version
+  - cdt_name
 - - python
   - numpy
 zlib:
