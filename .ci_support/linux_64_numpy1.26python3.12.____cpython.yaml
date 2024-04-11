@@ -1,5 +1,7 @@
 bzip2:
 - '1'
+c_blosc2:
+- '2.13'
 c_compiler:
 - gcc
 c_compiler_version:
