@@ -3,7 +3,7 @@ BUILD:
 bzip2:
 - '1'
 c_blosc2:
-- '2.13'
+- 2.14.4
 c_compiler:
 - gcc
 c_compiler_version:
