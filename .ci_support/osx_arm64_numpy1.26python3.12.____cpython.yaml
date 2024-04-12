@@ -3,7 +3,7 @@ MACOSX_DEPLOYMENT_TARGET:
 bzip2:
 - '1'
 c_blosc2:
-- '2.13'
+- 2.14.4
 c_compiler:
 - clang
 c_compiler_version:
