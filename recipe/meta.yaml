@@ -12,7 +12,7 @@ source:
     - allow_jxl.patch   # [unix and not ppc64le]
 
 build:
-  number: 6
+  number: 7
   skip: true  # [py<39]
 
 requirements:
@@ -112,3 +112,4 @@ extra:
     - csachs
     - hmaarrfk
     - sdvillal
+    - traversaro
