@@ -375,4 +375,5 @@ Feedstock Maintainers
 * [@csachs](https://github.com/csachs/)
 * [@hmaarrfk](https://github.com/hmaarrfk/)
 * [@sdvillal](https://github.com/sdvillal/)
+* [@traversaro](https://github.com/traversaro/)
 
