@@ -68,7 +68,7 @@ requirements:
 
 test:
 # Running the full test suite adds about 17 MB of files...
-{% if false %}
+{%- if false %}
   source_files:
     - tests
   requires:
@@ -79,7 +79,14 @@ test:
     # test procedure
     # https://github.com/conda-forge/imagecodecs-feedstock/pull/32#issuecomment-863041029
     - python test_imagecodecs.py -k "not test_image_roundtrips[jpeg2k-uint16-rgb-out-bytearray-None]"
-{% endif %}
+{%- endif %}
+  commands:
+# Just a subset of the codecs so I can feel like the test works. Add more as needed
+{%- set expected_codecs = ["BLOSC", "BLOSC2", "JPEGXL", "ZSTD", "LZ4"] %}
+{%- for codec in expected_codecs %}
+    - echo "Testing for {{ codec }}"
+    - python -c 'import imagecodecs; assert imagecodecs.JPEGXL.available'
+{%- endfor %}
   imports:
     - imagecodecs
     - imagecodecs._imagecodecs
