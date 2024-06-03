@@ -8,6 +8,8 @@ package:
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
   sha256: 0f3e94b7f51e2f78287b7ffae82cd850b1007639148894538274fa50bd179886
+  patches:              # [unix and not ppc64le]
+    - allow_jxl.patch   # [unix and not ppc64le]
 
 build:
   number: 0
@@ -80,11 +82,13 @@ test:
 {%- endif %}
   commands:
 # Just a subset of the codecs so I can feel like the test works. Add more as needed
-{%- set expected_codecs = ["BLOSC", "BLOSC2", "JPEGXL", "ZSTD", "LZ4"] %}
+{%- set expected_codecs = ["BLOSC", "BLOSC2", "ZSTD", "LZ4"] %}
 {%- for codec in expected_codecs %}
     - echo "Testing for {{ codec }}"
     - python -c 'import imagecodecs; assert imagecodecs.{{ codec }}.available'
 {%- endfor %}
+    - echo "Testing for JPEGXL"                                             # [unix and not ppc64le]
+    - python -c 'import imagecodecs; assert imagecodecs.JPEGXL.available'   # [unix and not ppc64le]
   imports:
     - imagecodecs
     - imagecodecs._imagecodecs
