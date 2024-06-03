@@ -1,5 +1,5 @@
 {% set name = "imagecodecs" %}
-{% set version = "2024.1.1" %}
+{% set version = "2024.6.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,12 +7,12 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: fde46bd698d008255deef5411c59b35c0e875295e835bf6079f7e2ab22f216eb
+  sha256: 0f3e94b7f51e2f78287b7ffae82cd850b1007639148894538274fa50bd179886
   patches:              # [unix and not ppc64le]
     - allow_jxl.patch   # [unix and not ppc64le]
 
 build:
-  number: 7
+  number: 0
   skip: true  # [py<39]
 
 requirements:
@@ -68,7 +68,7 @@ requirements:
 
 test:
 # Running the full test suite adds about 17 MB of files...
-{% if false %}
+{%- if false %}
   source_files:
     - tests
   requires:
@@ -79,7 +79,16 @@ test:
     # test procedure
     # https://github.com/conda-forge/imagecodecs-feedstock/pull/32#issuecomment-863041029
     - python test_imagecodecs.py -k "not test_image_roundtrips[jpeg2k-uint16-rgb-out-bytearray-None]"
-{% endif %}
+{%- endif %}
+  commands:
+# Just a subset of the codecs so I can feel like the test works. Add more as needed
+{%- set expected_codecs = ["BLOSC", "BLOSC2", "ZSTD", "LZ4"] %}
+{%- for codec in expected_codecs %}
+    - echo "Testing for {{ codec }}"
+    - python -c "import imagecodecs; assert imagecodecs.{{ codec }}.available"
+{%- endfor %}
+    - echo "Testing for JPEGXL"                                             # [unix and not ppc64le]
+    - python -c 'import imagecodecs; assert imagecodecs.JPEGXL.available'   # [unix and not ppc64le]
   imports:
     - imagecodecs
     - imagecodecs._imagecodecs
