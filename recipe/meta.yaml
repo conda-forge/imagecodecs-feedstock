@@ -83,7 +83,7 @@ test:
 {%- set expected_codecs = ["BLOSC", "BLOSC2", "JPEGXL", "ZSTD", "LZ4"] %}
 {%- for codec in expected_codecs %}
     - echo "Testing for {{ codec }}"
-    - python -c 'import imagecodecs; assert imagecodecs.JPEGXL.available'
+    - python -c 'import imagecodecs; assert imagecodecs.{{ codec }}.available'
 {%- endfor %}
   imports:
     - imagecodecs
