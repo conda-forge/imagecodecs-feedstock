@@ -12,7 +12,7 @@ source:
     - allow_jxl.patch   # [unix and not ppc64le]
 
 build:
-  number: 1
+  number: 2
   skip: true  # [py<39]
 
 requirements:
@@ -63,7 +63,6 @@ requirements:
     - brunsli   # [not win]
   run:
     - python
-    - {{ pin_compatible('numpy') }}
 
 
 test:
