@@ -9,7 +9,7 @@ c_blosc2:
 c_compiler:
 - clang
 c_compiler_version:
-- '16'
+- '17'
 c_stdlib:
 - macosx_deployment_target
 c_stdlib_version:
@@ -21,7 +21,7 @@ channel_targets:
 cxx_compiler:
 - clangxx
 cxx_compiler_version:
-- '16'
+- '17'
 giflib:
 - '5.2'
 lcms2:
@@ -39,7 +39,7 @@ libjpeg_turbo:
 libpng:
 - '1.6'
 libtiff:
-- '4.6'
+- '4.7'
 libwebp:
 - '1'
 lz4_c:
@@ -69,6 +69,7 @@ zip_keys:
   - cxx_compiler_version
 - - python
   - numpy
+  - channel_sources
 zlib:
 - '1'
 zstd:

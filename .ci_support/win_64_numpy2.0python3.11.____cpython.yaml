@@ -29,7 +29,7 @@ libjpeg_turbo:
 libpng:
 - '1.6'
 libtiff:
-- '4.6'
+- '4.7'
 libwebp:
 - '1'
 lz4_c:
@@ -55,6 +55,7 @@ zfp:
 zip_keys:
 - - python
   - numpy
+  - channel_sources
 zlib:
 - '1'
 zstd:
