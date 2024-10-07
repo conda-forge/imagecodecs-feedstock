@@ -23,7 +23,7 @@ libaec:
 libavif:
 - '1'
 libdeflate:
-- '1.21'
+- '1.22'
 libjpeg_turbo:
 - '3'
 libpng:
