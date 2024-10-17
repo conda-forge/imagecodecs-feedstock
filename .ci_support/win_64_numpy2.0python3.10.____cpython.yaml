@@ -57,5 +57,7 @@ zip_keys:
   - numpy
 zlib:
 - '1'
+zlib_ng:
+- '2.2'
 zstd:
 - '1.5'
