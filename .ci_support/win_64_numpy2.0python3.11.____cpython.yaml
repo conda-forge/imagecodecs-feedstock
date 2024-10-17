@@ -55,8 +55,9 @@ zfp:
 zip_keys:
 - - python
   - numpy
-  - channel_sources
 zlib:
 - '1'
+zlib_ng:
+- '2.2'
 zstd:
 - '1.5'
