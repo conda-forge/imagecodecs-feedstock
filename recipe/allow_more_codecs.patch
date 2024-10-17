@@ -1,0 +1,12 @@
+diff --git a/setup.py b/setup.py
+index f0e4f7a..b7079e7 100644
+--- a/setup.py
++++ b/setup.py
+@@ -527,7 +527,6 @@ def customize_build_condaforge(EXTENSIONS, OPTIONS):
+     del EXTENSIONS['sperr']
+     del EXTENSIONS['sz3']
+     del EXTENSIONS['ultrahdr']
+-    del EXTENSIONS['zlibng']
+ 
+     EXTENSIONS['jpeg8']['sources'] = []  # use libjpeg-turbo 3
+ 
