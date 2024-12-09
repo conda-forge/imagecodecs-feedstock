@@ -1,5 +1,5 @@
 diff --git a/setup.py b/setup.py
-index f0e4f7a..13ccc1f 100644
+index f0e4f7a..7dcee96 100644
 --- a/setup.py
 +++ b/setup.py
 @@ -527,14 +527,13 @@ def customize_build_condaforge(EXTENSIONS, OPTIONS):
@@ -18,15 +18,17 @@ index f0e4f7a..13ccc1f 100644
          EXTENSIONS['bz2']['libraries'] = ['bzip2']
          EXTENSIONS['jpeg2k']['include_dirs'] += [
              os.path.join(
-@@ -542,7 +541,7 @@ def customize_build_condaforge(EXTENSIONS, OPTIONS):
+@@ -542,8 +541,8 @@ def customize_build_condaforge(EXTENSIONS, OPTIONS):
              )
          ]
          EXTENSIONS['jpegls']['libraries'] = ['charls-2-x64']
 -        EXTENSIONS['lz4']['libraries'] = ['liblz4']
+-        EXTENSIONS['lzma']['libraries'] = ['liblzma']
 +        EXTENSIONS['lz4']['libraries'] = ['lz4']
-         EXTENSIONS['lzma']['libraries'] = ['liblzma']
++        EXTENSIONS['lzma']['libraries'] = ['lzma']
          EXTENSIONS['png']['libraries'] = ['libpng', 'z']
          EXTENSIONS['webp']['libraries'] = ['libwebp', 'libwebpdemux']
+         EXTENSIONS['zopfli']['include_dirs'] = [
 @@ -554,6 +553,7 @@ def customize_build_condaforge(EXTENSIONS, OPTIONS):
          ]
          EXTENSIONS['jpegxr']['libraries'] = ['libjpegxr', 'libjxrglue']
