@@ -34,7 +34,7 @@ requirements:
     - zlib
     - zlib-ng
     - bzip2
-    - xz
+    - liblzma-devel
     - zstd
     - lz4-c
     - libpng
