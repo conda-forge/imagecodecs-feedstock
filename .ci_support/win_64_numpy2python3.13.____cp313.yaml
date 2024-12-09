@@ -26,6 +26,8 @@ libdeflate:
 - '1.22'
 libjpeg_turbo:
 - '3'
+liblzma_devel:
+- '5'
 libpng:
 - '1.6'
 libtiff:
@@ -33,7 +35,7 @@ libtiff:
 libwebp:
 - '1'
 lz4_c:
-- 1.9.3
+- '1.10'
 numpy:
 - '2'
 openjpeg:
@@ -48,8 +50,6 @@ snappy:
 - '1.2'
 target_platform:
 - win-64
-xz:
-- '5'
 zfp:
 - '1.0'
 zip_keys:

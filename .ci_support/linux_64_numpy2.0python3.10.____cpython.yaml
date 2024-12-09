@@ -11,7 +11,7 @@ c_stdlib:
 c_stdlib_version:
 - '2.17'
 cdt_name:
-- cos7
+- conda
 channel_sources:
 - conda-forge
 channel_targets:
@@ -21,7 +21,7 @@ cxx_compiler:
 cxx_compiler_version:
 - '13'
 docker_image:
-- quay.io/condaforge/linux-anvil-cos7-x86_64
+- quay.io/condaforge/linux-anvil-x86_64:alma9
 giflib:
 - '5.2'
 lcms2:
@@ -36,6 +36,8 @@ libdeflate:
 - '1.22'
 libjpeg_turbo:
 - '3'
+liblzma_devel:
+- '5'
 libpng:
 - '1.6'
 libtiff:
@@ -43,7 +45,7 @@ libtiff:
 libwebp:
 - '1'
 lz4_c:
-- 1.9.3
+- '1.10'
 numpy:
 - '2.0'
 openjpeg:
@@ -58,15 +60,11 @@ snappy:
 - '1.2'
 target_platform:
 - linux-64
-xz:
-- '5'
 zfp:
 - '1.0'
 zip_keys:
 - - c_compiler_version
   - cxx_compiler_version
-- - c_stdlib_version
-  - cdt_name
 - - python
   - numpy
 zlib:
