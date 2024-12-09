@@ -36,6 +36,8 @@ libdeflate:
 - '1.22'
 libjpeg_turbo:
 - '3'
+liblzma_devel:
+- '5'
 libpng:
 - '1.6'
 libtiff:
@@ -58,8 +60,6 @@ snappy:
 - '1.2'
 target_platform:
 - linux-aarch64
-xz:
-- '5'
 zfp:
 - '1.0'
 zip_keys:
