@@ -74,7 +74,7 @@ test:
 {% endif %}
   commands:
 # Just a subset of the codecs so I can feel like the test works. Add more as needed
-{% set expected_codecs = ["BLOSC", "BLOSC2", "ZSTD", "LZ4", "ZLIB", "ZLIBNG", "JPEGXL"] %}
+{% set expected_codecs = ["BLOSC", "BLOSC2", "ZSTD", "LZ4", "ZLIB", "ZLIBNG", "LZMA", "JPEGXL"] %}
 {% for codec in expected_codecs %}
     - echo "Testing for {{ codec }}"
     - python -c "import imagecodecs; assert imagecodecs.{{ codec }}.available"
