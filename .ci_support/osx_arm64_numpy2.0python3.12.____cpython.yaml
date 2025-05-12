@@ -5,7 +5,7 @@ MACOSX_SDK_VERSION:
 bzip2:
 - '1'
 c_blosc2:
-- '2.15'
+- '2.17'
 c_compiler:
 - clang
 c_compiler_version:
@@ -33,7 +33,7 @@ libaec:
 libavif:
 - '1'
 libdeflate:
-- '1.23'
+- '1.24'
 libjpeg_turbo:
 - '3'
 liblzma_devel:
