@@ -7,10 +7,15 @@ package:
 source:
   url: https://pypi.org/packages/source/i/imagecodecs/imagecodecs-{{ version }}.tar.gz
   sha256: 29256f44a7fcfb8f235a3e9b3bae72b06ea2112e63bcc892267a8c01b7097f90
+  patches:
+    - openjpeg_setup_unix.patch
 
 build:
   number: 0
   skip: true  # [py<310]
+  script_env:
+    - openjpeg=2.5
+  script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   build:
