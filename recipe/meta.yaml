@@ -13,9 +13,10 @@ source:
 build:
   number: 0
   skip: true  # [py<310]
-  script_env:
-    - openjpeg=2.5
-  script: {{ PYTHON }} -m pip install . -vv
+  script: 
+    - export openjpeg=2.5                   # [unix]
+    - set openjpeg=2.5                      # [win]
+    - {{ PYTHON }} -m pip install . -vv
 
 requirements:
   build:
