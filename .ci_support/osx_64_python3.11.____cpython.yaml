@@ -5,7 +5,7 @@ MACOSX_SDK_VERSION:
 bzip2:
 - '1'
 c_blosc2:
-- '2.17'
+- '2.18'
 c_compiler:
 - clang
 c_compiler_version:
@@ -49,7 +49,7 @@ lz4_c:
 macos_machine:
 - x86_64-apple-darwin13.4.0
 numpy:
-- '2.0'
+- '2'
 openjpeg:
 - '2'
 pin_run_as_build:
@@ -67,8 +67,6 @@ zfp:
 zip_keys:
 - - c_compiler_version
   - cxx_compiler_version
-- - python
-  - numpy
 zlib:
 - '1'
 zlib_ng:
