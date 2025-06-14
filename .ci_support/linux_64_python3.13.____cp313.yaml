@@ -1,7 +1,7 @@
 bzip2:
 - '1'
 c_blosc2:
-- '2.17'
+- '2.18'
 c_compiler:
 - gcc
 c_compiler_version:
@@ -59,14 +59,12 @@ python:
 snappy:
 - '1.2'
 target_platform:
-- linux-aarch64
+- linux-64
 zfp:
 - '1.0'
 zip_keys:
 - - c_compiler_version
   - cxx_compiler_version
-- - python
-  - numpy
 zlib:
 - '1'
 zlib_ng:
