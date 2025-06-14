@@ -64,31 +64,30 @@ requirements:
   run:
     - python
 
-
 test:
-# Running the full test suite adds about 17 MB of files...
-{% if false %}
-  source_files:
-    - tests
-  requires:
-    - pytest
+  imports:
+    - imagecodecs
+    - imagecodecs._imagecodecs
   commands:
-    - cd tests
-    # 20210717 hmaarrfk: This test seems to be flaky in the upstream
-    # test procedure
-    # https://github.com/conda-forge/imagecodecs-feedstock/pull/32#issuecomment-863041029
-    - python test_imagecodecs.py -k "not test_image_roundtrips[jpeg2k-uint16-rgb-out-bytearray-None]"
-{% endif %}
-  commands:
-# Just a subset of the codecs so I can feel like the test works. Add more as needed
+    # Test feor existance of a subset of the codecs so I can feel like the test works. Add more as needed
 {% set expected_codecs = ["BLOSC", "BLOSC2", "ZSTD", "LZ4", "ZLIB", "ZLIBNG", "LZMA", "JPEGXL"] %}
 {% for codec in expected_codecs %}
     - echo "Testing for {{ codec }}"
     - python -c "import imagecodecs; assert imagecodecs.{{ codec }}.available"
 {% endfor %}
-  imports:
-    - imagecodecs
-    - imagecodecs._imagecodecs
+# Running the full test suite adds about 17 MB of files...
+{% if false %}
+    # if true -- fall through and run the full test suite
+    - cd tests
+    # 20210717 hmaarrfk: This test seems to be flaky in the upstream
+    # test procedure
+    # https://github.com/conda-forge/imagecodecs-feedstock/pull/32#issuecomment-863041029
+    - python test_imagecodecs.py -k "not test_image_roundtrips[jpeg2k-uint16-rgb-out-bytearray-None]"
+  source_files:
+    - tests
+  requires:
+    - pytest
+{% endif %}
 
 about:
   home: https://www.lfd.uci.edu/~gohlke/
