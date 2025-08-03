@@ -12,7 +12,7 @@ source:
 
 build:
   number: 0
-  skip: true  # [py<310]
+  skip: true  # [py<311]
   script:
     - export openjpeg=2.5                   # [unix]
     - set openjpeg=2.5                      # [win]
