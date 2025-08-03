@@ -1,4 +1,4 @@
-{% set version = "2025.3.30" %}
+{% set version = "2025.8.2" %}
 
 package:
   name: imagecodecs
@@ -6,14 +6,14 @@ package:
 
 source:
   url: https://pypi.org/packages/source/i/imagecodecs/imagecodecs-{{ version }}.tar.gz
-  sha256: 29256f44a7fcfb8f235a3e9b3bae72b06ea2112e63bcc892267a8c01b7097f90
+  sha256: 2af272aac90c370326a7e2fffcbbbd32d42de07576959a2a98d60110267dfe6c
   patches:
     - openjpeg_setup_unix.patch
 
 build:
-  number: 2
+  number: 0
   skip: true  # [py<310]
-  script: 
+  script:
     - export openjpeg=2.5                   # [unix]
     - set openjpeg=2.5                      # [win]
     - {{ PYTHON }} -m pip install . -vv
