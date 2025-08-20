@@ -5,7 +5,7 @@ MACOSX_SDK_VERSION:
 bzip2:
 - '1'
 c_blosc2:
-- '2.20'
+- '2.21'
 c_compiler:
 - clang
 c_compiler_version:
