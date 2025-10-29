@@ -11,7 +11,7 @@ source:
     - openjpeg_setup_unix.patch
 
 build:
-  number: 4
+  number: 5
   skip: true  # [py<311]
   script:
     - export openjpeg=2.5                   # [unix]
