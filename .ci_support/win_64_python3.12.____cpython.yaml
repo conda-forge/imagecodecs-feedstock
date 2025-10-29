@@ -3,7 +3,7 @@ brotli:
 bzip2:
 - '1'
 c_blosc2:
-- '2.21'
+- '2.22'
 c_compiler:
 - vs2022
 c_stdlib:
@@ -54,9 +54,6 @@ target_platform:
 - win-64
 zfp:
 - '1.0'
-zip_keys:
-- - python
-  - channel_sources
 zlib:
 - '1'
 zlib_ng:
