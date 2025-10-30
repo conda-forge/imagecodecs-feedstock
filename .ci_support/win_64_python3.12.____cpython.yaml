@@ -1,5 +1,5 @@
 brotli:
-- '1.1'
+- '1.2'
 bzip2:
 - '1'
 c_blosc2:
