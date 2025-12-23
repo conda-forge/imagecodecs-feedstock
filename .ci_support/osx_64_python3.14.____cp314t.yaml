@@ -1,0 +1,77 @@
+MACOSX_DEPLOYMENT_TARGET:
+- '10.13'
+MACOSX_SDK_VERSION:
+- '10.13'
+brotli:
+- '1.2'
+bzip2:
+- '1'
+c_blosc2:
+- '2.22'
+c_compiler:
+- clang
+c_compiler_version:
+- '19'
+c_stdlib:
+- macosx_deployment_target
+c_stdlib_version:
+- '10.13'
+channel_sources:
+- conda-forge
+channel_targets:
+- conda-forge main
+cxx_compiler:
+- clangxx
+cxx_compiler_version:
+- '19'
+giflib:
+- '5.2'
+lcms2:
+- '2'
+lerc:
+- '4'
+libaec:
+- '1'
+libavif:
+- '1'
+libdeflate:
+- '1.25'
+libjpeg_turbo:
+- '3'
+liblzma_devel:
+- '5'
+libpng:
+- '1.6'
+libtiff:
+- '4.7'
+libwebp:
+- '1'
+lz4_c:
+- '1.10'
+macos_machine:
+- x86_64-apple-darwin13.4.0
+numpy:
+- '2'
+openjpeg:
+- '2'
+pin_run_as_build:
+  python:
+    min_pin: x.x
+    max_pin: x.x
+python:
+- 3.14.* *_cp314t
+snappy:
+- '1.2'
+target_platform:
+- osx-64
+zfp:
+- '1.0'
+zip_keys:
+- - c_compiler_version
+  - cxx_compiler_version
+zlib:
+- '1'
+zlib_ng:
+- '2.3'
+zstd:
+- '1.5'
