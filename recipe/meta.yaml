@@ -1,4 +1,4 @@
-{% set version = "2025.11.11" %}
+{% set version = "2026.1.1" %}
 
 package:
   name: imagecodecs
@@ -6,12 +6,12 @@ package:
 
 source:
   url: https://pypi.org/packages/source/i/imagecodecs/imagecodecs-{{ version }}.tar.gz
-  sha256: a836d329f91c890d17b9dc3f3a2bba944a198ae741592c3cb0c4b9b097d10d34
+  sha256: 1bf7fd913bfcc33d72b788aa2ccdcfae163beb04eb380dec9c8d05bcee956caa
   patches:
     - openjpeg_setup_unix.patch
 
 build:
-  number: 2
+  number: 0
   skip: true  # [py<311]
   script:
     - export openjpeg=2.5                   # [unix]
