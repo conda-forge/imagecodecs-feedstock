@@ -60,6 +60,7 @@ requirements:
     - lerc
     - zfp
     - libdeflate
+    - openjph
     - brunsli   # [not win]
   run:
     - python
