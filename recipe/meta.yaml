@@ -7,15 +7,13 @@ package:
 source:
   url: https://pypi.org/packages/source/i/imagecodecs/imagecodecs-{{ version }}.tar.gz
   sha256: 1bf7fd913bfcc33d72b788aa2ccdcfae163beb04eb380dec9c8d05bcee956caa
-  patches:
-    - openjpeg_setup_unix.patch
 
 build:
   number: 0
   skip: true  # [py<311]
   script:
-    - export openjpeg=2.5                   # [unix]
-    - set openjpeg=2.5                      # [win]
+    - export OPENJPEG=2.5                   # [unix]
+    - set OPENJPEG=2.5                      # [win]
     - {{ PYTHON }} -m pip install . -vv
 
 requirements:
@@ -71,7 +69,7 @@ test:
     - imagecodecs._imagecodecs
   commands:
     # Test feor existance of a subset of the codecs so I can feel like the test works. Add more as needed
-{% set expected_codecs = ["BLOSC", "BLOSC2", "ZSTD", "LZ4", "ZLIB", "ZLIBNG", "LZMA", "JPEGXL"] %}
+{% set expected_codecs = ["BLOSC", "BLOSC2", "ZSTD", "LZ4", "ZLIB", "ZLIBNG", "LZMA", "JPEGXL", "HTJ2K"] %}
 {% for codec in expected_codecs %}
     - echo "Testing for {{ codec }}"
     - python -c "import imagecodecs; assert imagecodecs.{{ codec }}.available"
