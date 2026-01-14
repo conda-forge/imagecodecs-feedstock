@@ -1,4 +1,4 @@
-{% set version = "2026.1.1" %}
+{% set version = "2026.1.14" %}
 
 package:
   name: imagecodecs
@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/i/imagecodecs/imagecodecs-{{ version }}.tar.gz
-  sha256: 1bf7fd913bfcc33d72b788aa2ccdcfae163beb04eb380dec9c8d05bcee956caa
+  sha256: e37ef5116d41ba90b1c9d1d7121846671fd65c271f0c15ef24208353fa79b283
 
 build:
   number: 0
