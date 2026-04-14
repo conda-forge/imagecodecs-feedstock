@@ -3,7 +3,7 @@ About imagecodecs-feedstock
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/imagecodecs-feedstock/blob/main/LICENSE.txt)
 
-Home: https://www.lfd.uci.edu/~gohlke/
+Home: https://www.cgohlke.com
 
 Package license: BSD-3-Clause
 
@@ -11,16 +11,26 @@ Summary: Image transformation, compression, and decompression codecs
 
 Development: https://github.com/cgohlke/imagecodecs
 
-Documentation: https://www.lfd.uci.edu/~gohlke/
+Imagecodecs is a Python library that provides block-oriented, in-memory buffer
+transformation, compression, and decompression functions for use in tifffile,
+liffile, czifile, zarr, and other scientific image input/output packages.
 
-The imagecodecs package provides various block-oriented, in-memory buffer
-transformation, compression, and decompression functions for use in the
-tifffile, czifile, and other Python imaging modules.
-
-Decode and/or encode functions are currently implemented for Zlib DEFLATE,
-ZStandard, Blosc, LZMA, BZ2, LZ4, LZW, LZF, PNG, WebP, JPEG 8-bit,
-JPEG 12-bit, JPEG SOF=0xC3, JPEG 2000, JPEG XR, PackBits, Packed Integers,
-Delta, XOR Delta, Floating Point Predictor, and Bitorder reversal.
+Decode and/or encode functions are implemented for
+Zlib (DEFLATE), GZIP, LZMA, ZStandard (ZSTD), Blosc, Brotli, Snappy,
+BZ2, LZ4, LZ4F, LZ4HC, LZ4H5, LZW, LZO, LZF, LZFSE, LZHAM,
+PGLZ (PostgreSQL LZ), RCOMP (Rice), ZFP, SZ3, Meshopt, Pcodec, SPERR,
+AEC, SZIP, LERC, EER, NPY, BCn, DDS, BMP, PNG, APNG, GIF, TIFF, WebP,
+JPEG (2 to 16-bit), Lossless JPEG (LJPEG, LJ92, JPEGLL), JPEG 2000 (JP2, J2K),
+High-throughput JPEG 2000 (HTJ2K, JPH), JPEG LS, JPEG XL, JPEG XS,
+JPEG XR (WDP, HD Photo), Ultra HDR (JPEG_R), MOZJPEG, AVIF, HEIF,
+QOI, RGBE (HDR), PixarLog, Jetraw, DICOM RLE, CCITT (RLE, T.4 and T.6),
+PackBits, Packed Integers (TIFF, MONO p and packed), Delta, XOR Delta,
+Floating Point Predictor, Bitorder reversal, Byteshuffle, Bitshuffle,
+Float24 (24-bit floating point), Bfloat16 (brain floating point),
+Quantize (Scale, BitGroom, BitRound, GranularBR), and
+CMS (color space transformations).
+Checksum functions are implemented for CRC-32, Adler-32, Fletcher-32, and
+Jenkins lookup3.
 
 
 Current build status
