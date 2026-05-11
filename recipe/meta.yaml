@@ -7,10 +7,12 @@ package:
 source:
   url: https://pypi.org/packages/source/i/imagecodecs/imagecodecs-{{ version }}.tar.gz
   sha256: 1c0c46860f35e4637c2df70ebe8aa15141f6c4202a698e63757a4d7917a85acc
+  patches:
+    - 0001-link-libwebpmux-and-libsharpyuv-on-conda-forge-windows.patch
 
 build:
   number: 0
-  skip: true  # [py<311]
+  skip: true  # [py<312]
   script:
     - export OPENJPEG=2.5                   # [unix]
     - set OPENJPEG=2.5                      # [win]
