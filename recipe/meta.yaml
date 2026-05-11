@@ -1,4 +1,4 @@
-{% set version = "2026.3.6" %}
+{% set version = "2026.5.10" %}
 
 package:
   name: imagecodecs
@@ -6,10 +6,10 @@ package:
 
 source:
   url: https://pypi.org/packages/source/i/imagecodecs/imagecodecs-{{ version }}.tar.gz
-  sha256: 471b8a4d1b3843cbf7179b45f7d7261f0c0b28809efc1ca6c47822477b143b85
+  sha256: 1c0c46860f35e4637c2df70ebe8aa15141f6c4202a698e63757a4d7917a85acc
 
 build:
-  number: 3
+  number: 0
   skip: true  # [py<311]
   script:
     - export OPENJPEG=2.5                   # [unix]
@@ -102,7 +102,7 @@ about:
     Imagecodecs is a Python library that provides block-oriented, in-memory buffer
     transformation, compression, and decompression functions for use in tifffile,
     liffile, czifile, zarr, and other scientific image input/output packages.
-    
+
     Decode and/or encode functions are implemented for
     Zlib (DEFLATE), GZIP, LZMA, ZStandard (ZSTD), Blosc, Brotli, Snappy,
     BZ2, LZ4, LZ4F, LZ4HC, LZ4H5, LZW, LZO, LZF, LZFSE, LZHAM,
