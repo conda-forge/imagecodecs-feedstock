@@ -11,7 +11,7 @@ source:
     - 0001-link-libwebpmux-and-libsharpyuv-on-conda-forge-windows.patch
 
 build:
-  number: 0
+  number: 1
   skip: true  # [py<312]
   script:
     - export OPENJPEG=2.5                   # [unix]
