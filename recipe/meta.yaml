@@ -7,8 +7,6 @@ package:
 source:
   url: https://pypi.org/packages/source/i/imagecodecs/imagecodecs-{{ version }}.tar.gz
   sha256: c7b014f5c0e73ff455700b1db271415d3c35a3bddedca6527cb2eefcd2fa8a10
-  patches:
-    - 0001-link-libwebpmux-and-libsharpyuv-on-conda-forge-windows.patch
 
 build:
   number: 0
