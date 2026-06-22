@@ -9,7 +9,7 @@ source:
   sha256: c7b014f5c0e73ff455700b1db271415d3c35a3bddedca6527cb2eefcd2fa8a10
 
 build:
-  number: 2
+  number: 3
   skip: true  # [py<312]
   script:
     - export OPENJPEG=2.5                   # [unix]
