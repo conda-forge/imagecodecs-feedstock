@@ -60,8 +60,6 @@ pin_run_as_build:
     max_pin: x.x
 python:
 - 3.13.* *_cp313
-snappy:
-- '1.2'
 target_platform:
 - linux-aarch64
 zfp:

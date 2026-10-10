@@ -52,8 +52,6 @@ pin_run_as_build:
     max_pin: x.x
 python:
 - 3.14.* *_cp314t
-snappy:
-- '1.2'
 target_platform:
 - win-64
 zfp:
