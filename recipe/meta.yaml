@@ -52,7 +52,7 @@ requirements:
     - brotli
     - libzopfli
     - charls
-    - snappy
+    - snappy >=1.3
     - libtiff
     - libavif
     - lerc
