@@ -5,7 +5,7 @@ brotli:
 bzip2:
 - '1'
 c_blosc2:
-- '3.3'
+- '3.5'
 c_compiler:
 - gcc
 c_compiler_version:
@@ -35,7 +35,7 @@ libaec:
 libavif:
 - '1'
 libdeflate:
-- '1.25'
+- '1.26'
 libjpeg_turbo:
 - '3'
 libjxl:
