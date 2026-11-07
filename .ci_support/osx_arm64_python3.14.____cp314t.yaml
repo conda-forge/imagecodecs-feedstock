@@ -1,5 +1,3 @@
-MACOSX_DEPLOYMENT_TARGET:
-- '11.0'
 MACOSX_SDK_VERSION:
 - '11.0'
 brotli:
@@ -7,7 +5,7 @@ brotli:
 bzip2:
 - '1'
 c_blosc2:
-- '3.3'
+- '3.5'
 c_compiler:
 - clang
 c_compiler_version:
@@ -71,8 +69,6 @@ zfp:
 zip_keys:
 - - c_compiler_version
   - cxx_compiler_version
-- - python
-  - channel_sources
 zlib:
 - '1'
 zlib_ng:
