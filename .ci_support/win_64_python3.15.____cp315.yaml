@@ -9,7 +9,7 @@ c_compiler:
 c_stdlib:
 - vs
 channel_sources:
-- conda-forge,conda-forge/label/python_rc
+- conda-forge
 channel_targets:
 - conda-forge main
 cxx_compiler:
@@ -45,7 +45,7 @@ numpy:
 openjpeg:
 - '2'
 openjph:
-- '0.32'
+- '0.33'
 pin_run_as_build:
   python:
     min_pin: x.x
@@ -56,9 +56,6 @@ target_platform:
 - win-64
 zfp:
 - '1.0'
-zip_keys:
-- - python
-  - channel_sources
 zlib:
 - '1'
 zlib_ng:
