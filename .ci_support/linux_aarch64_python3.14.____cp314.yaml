@@ -5,7 +5,7 @@ brotli:
 bzip2:
 - '1'
 c_blosc2:
-- '3.5'
+- '3.6'
 c_compiler:
 - gcc
 c_compiler_version:
