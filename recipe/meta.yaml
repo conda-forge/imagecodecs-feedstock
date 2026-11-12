@@ -1,4 +1,4 @@
-{% set version = "2026.10.10" %}
+{% set version = "2026.11.11" %}
 
 package:
   name: imagecodecs
@@ -6,10 +6,10 @@ package:
 
 source:
   url: https://files.pythonhosted.org/packages/source/i/imagecodecs/imagecodecs-{{ version }}.tar.gz
-  sha256: cde6914505668196b15e0f99dbc236b779e3b61217f04d2e498cbae790965f9f
+  sha256: f3d0762f3676a2e7caca7d50825b06ec5865c00f18c2b367bb02797aec4e10d8
 
 build:
-  number: 3
+  number: 0
   skip: true  # [py<312]
   script:
     - export OPENJPEG=2.5                   # [unix]
