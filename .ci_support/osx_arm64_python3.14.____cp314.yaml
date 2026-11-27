@@ -5,7 +5,7 @@ brotli:
 bzip2:
 - '1'
 c_blosc2:
-- '3.8'
+- '3.9'
 c_compiler:
 - clang
 c_compiler_version:
@@ -74,4 +74,4 @@ zlib:
 zlib_ng:
 - '2.3'
 zstd:
-- '1.5'
+- '1.6'
